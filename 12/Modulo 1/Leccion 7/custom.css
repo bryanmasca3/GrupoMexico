@@ -1,0 +1,84 @@
+.container-circle {
+
+  width: 300px; /* Doble del radio del círculo original */
+  height: 300px; /* Doble del radio del círculo original */
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%; /* Esto hace que el div parezca un círculo */
+  position: relative; /* Establece el círculo como relativo */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.circle {
+  width: 90%; /* Doble del radio del círculo original */
+  height: 90%; /* Doble del radio del círculo original */
+  border-radius: 50%; /* Esto hace que el div parezca un círculo */
+  position: absolute; /* Establece el círculo como relativo */
+  overflow: hidden;
+  transition: all 0.5s ease;
+pointer-events: none;
+}
+.triangle-visible {
+  overflow: visible;
+}
+.triangle-container1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%; /* Ajusta la posición superior según tus necesidades */
+  left: 50%; /* Ajusta la posición izquierda según tus necesidades */
+  transform: translate(-50%, 0%) rotateZ(-120deg); /* Centra el triángulo con una de sus puntas en el centro del círculo */
+  transform-origin: top;
+}
+.triangle-container2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%; /* Ajusta la posición superior según tus necesidades */
+  left: 50%; /* Ajusta la posición izquierda según tus necesidades */
+  transform: translate(-50%, 0%) rotateZ(-360deg); /* Centra el triángulo con una de sus puntas en el centro del círculo */
+  transform-origin: top;
+}
+.triangle-container3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  top: 50%; /* Ajusta la posición superior según tus necesidades */
+  left: 50%; /* Ajusta la posición izquierda según tus necesidades */
+  transform: translate(-50%, 0%) rotateZ(-240deg); /* Centra el triángulo con una de sus puntas en el centro del círculo */
+  transform-origin: top;
+}
+
+.triangle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.triangle-outer {
+  clip-path: polygon(50% 0%, -125% 100%, 225% 100%);
+  background-color: #ffffff;
+  pointer-events: none;
+}
+
+.triangle-inner {
+  clip-path: polygon(50% 1%, -125% 100%, 225% 100%);
+  background-color: var(--colorsecondary);
+  font-weight: 500;
+  font-size: 1.0rem;
+}
+
+.second-triangle0{
+    transform: rotateZ(120deg) translate(20%,-100%);
+   
+}
+.second-triangle1{
+    transform: translateY(150%);
+  
+}
+.second-triangle2{
+    transform: rotateZ(240deg) translate(-20%,-100%);  
+}
