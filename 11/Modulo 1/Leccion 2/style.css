@@ -14,7 +14,11 @@
 .text-justify {
     text-align: justify;
 }
-
+body{
+    background-image: url("imagen/fondo02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 /* Contenedor para animaciones de rotación */
 .rotate-instruction {
     position: fixed;
@@ -238,7 +242,7 @@
 
 /* Miniatura activa */
 .miniatura.active {
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid rgb(255, 182, 0);
 }
 
 /* Imagen dentro de miniatura */

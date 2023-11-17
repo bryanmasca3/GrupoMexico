@@ -10,6 +10,11 @@
     /* Tamaño de fuente para elementos */
 }
 
+body{
+  background-image: url("imagen/fondo02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* Clase para justificar texto */
 .text-justify {
     text-align: justify;
@@ -58,7 +63,7 @@
   }
    */
   .background-circle {
-    background-color: #fff;
+    background-color: transparent;
   
     border: 30px solid var(--clickedcolor);
     border-radius: 50%;
@@ -291,7 +296,7 @@
 
 /* Miniatura activa */
 .miniatura.active {
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid rgb(255, 182, 0);
 }
 
 /* Imagen dentro de miniatura */
@@ -436,9 +441,9 @@
   }
   
   .background-circle {
-    background-color: #fff;
+    background-color: transparent;
   
-    border: 30px solid var(--clickedcolor);
+    border: 30px solid #000;
     border-radius: 50%;
     position: absolute;
     left: 0;

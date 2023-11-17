@@ -7,7 +7,7 @@ var susbcount = 1;
 var miAudio = document.getElementById("miAudio");
 var countblock = 1;
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 9: Efectos de la corriente eléctrica en el cuerpo humano​",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -21,7 +21,7 @@ var data = {
       carouselimg: false,
       type: false,
       narracion:
-        "Fibrilación: La fibrilación es una alteración grave del ritmo cardíaco que puede ocurrir cuando la energia eléctrica pasa a través del corazón. Esto puede llevar a un paro cardiaco, ya que el corazón no puede bombear sangre de manera efectiva.",
+        "La fibrilación es una alteración grave del ritmo cardíaco que puede ocurrir cuando la energia eléctrica pasa a través del corazón. Esto puede llevar a un paro cardiaco, ya que el corazón no puede bombear sangre de manera efectiva.",
     },
     {
       text: "​",
@@ -37,7 +37,7 @@ var data = {
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
-        "Paro Cardíaco: Esto sucede cuando una persona se electrocuta y la energía eléctrica pasa a través del corazón. Este efecto es extremadamente grave y potencialmente mortal si no se trata de inmediato. ​ ​",
+        "Esto sucede cuando una persona se electrocuta y la energía eléctrica pasa a través del corazón. Este efecto es extremadamente grave y potencialmente mortal si no se trata de inmediato. ​ ​",
     },
     {
       text: "​",
@@ -53,7 +53,7 @@ var data = {
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
-        "Asfixia: Esto sucede cuando la energia eléctrica atraviesa el tórax, provocando una contracción involuntaria del diafragma, lo que impide la respiración. Esto puede llevar a la asfixia y ser fatal si no se trata de manera rápida y adecuada. ​ ​",
+        "Esto sucede cuando la energia eléctrica atraviesa el tórax, provocando una contracción involuntaria del diafragma, lo que impide la respiración. Esto puede llevar a la asfixia y ser fatal si no se trata de manera rápida y adecuada. ​ ​",
     },
     {
       text: "​",
@@ -69,7 +69,7 @@ var data = {
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
-        "Tetanización: La tetanización es la contracción muscular involuntaria y sostenida. Esto puede hacer que sea imposible separarse del punto de contacto, lo que aumenta el riesgo de lesiones adicionales. ​ ​​",
+        "La tetanización es la contracción muscular involuntaria y sostenida. Esto puede hacer que sea imposible separarse del punto de contacto, lo que aumenta el riesgo de lesiones adicionales. ​ ​​",
     },
     {
       text: "​",
@@ -85,7 +85,7 @@ var data = {
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
-        "Quemaduras: Esto pasa cuando la energia eléctrica fluye por nuestro cuerpo causando quemaduras tanto internas como externas. Pueden ser muy graves y afectar a los órganos internos. ​ ​",
+        "Esto pasa cuando la energia eléctrica fluye por nuestro cuerpo causando quemaduras tanto internas como externas. Pueden ser muy graves y afectar a los órganos internos. ​ ​",
     },
     {
       text: "​",
@@ -101,7 +101,7 @@ var data = {
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
-        "Lesiones permanentes: La corriente eléctrica puede causar daños permanentes al sistema nervioso, lo que puede resultar en parálisis, contracturas permanentes y otras lesiones crónicas.​ ​",
+        "La corriente eléctrica puede causar daños permanentes al sistema nervioso, lo que puede resultar en parálisis, contracturas permanentes y otras lesiones crónicas.​ ​",
     },
   ],
 };
@@ -165,16 +165,36 @@ $(window).on("load", function () {
   $("#cargaModal").modal("hide");
 });
 
-const voltear = () => {
+function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
+
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
   if (isFrontVisible) {
-    flipContent.style.transform = "rotateY(180deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
+      // Gira hacia la cara trasera (texto)
+      if (isFirefox) {
+          imgModal.style.display = 'none';
+          textModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(180deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
   } else {
-    flipContent.style.transform = "rotateY(0deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
+      // Gira hacia la cara frontal (imagen)
+      if (isFirefox) {
+          textModal.style.display = 'none';
+          imgModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(0deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
   }
+
+  // Cambia el estado de visibilidad
   isFrontVisible = !isFrontVisible;
-};
+}
 
 flipButton.addEventListener("click", function () {
   voltear();

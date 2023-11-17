@@ -300,7 +300,7 @@
 
 .content-main { 
   display: flex;
-  padding: 80px;
+  padding: 70px;
   flex-direction: column;
 }
 #content {

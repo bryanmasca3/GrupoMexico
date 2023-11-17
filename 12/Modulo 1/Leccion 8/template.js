@@ -74,7 +74,7 @@ const buildTemplate1 = (id, elementos) => {
           }
           $("#modal-primary").modal("show");
           $("#img-modal").attr("src", elemento.image);
-
+          $("#title-secondary-modal").text(elemento.text);
           // $("#title-modal").text("Medidas de prevención contra caídas");
           reproducirAudioItem(elemento.src);
           countblock = elemento.carousel?.length

@@ -37,7 +37,7 @@ const buildTemplate1 = (id, elementos) => {
 
         $("#modal-primary").modal("show");
         $("#img-modal").attr("src", elemento.image);
-        $("#title-secondary-modal").text(elemento.text);
+        $("#title-secondary-modal").text(elemento.textInner);
         // $('#title-modal').text('Medidas de prevención contra caídas');
         reproducirAudioItem(elemento.src);
         if (elemento.carousel && elemento.carouselimg) {
@@ -76,7 +76,7 @@ const buildTemplate1 = (id, elementos) => {
           circle.classList.add("triangle-visible");
           $("#modal-primary").modal("show");
           $("#img-modal").attr("src", elemento.image);
-          $("#title-secondary-modal").text(elemento.text);
+          $("#title-secondary-modal").text(elemento.textInner);
 
           reproducirAudioItem(elemento.src);
           countblock = elemento.carousel?.length

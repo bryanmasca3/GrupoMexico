@@ -7,7 +7,7 @@ var susbcount = 1;
 var miAudio = document.getElementById("miAudio");
 
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 2:	Referencia Normativa",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -98,17 +98,36 @@ $(window).on("load", function () {
   $("#cargaModal").modal("hide");
 });
 
-const voltear = () => {
-  if (isFrontVisible) {
-    flipContent.style.transform = "rotateY(180deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
-  } else {
-    flipContent.style.transform = "rotateY(0deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
-  }
-  isFrontVisible = !isFrontVisible;
-};
+function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
 
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
+  if (isFrontVisible) {
+      // Gira hacia la cara trasera (texto)
+      if (isFirefox) {
+          imgModal.style.display = 'none';
+          textModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(180deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
+  } else {
+      // Gira hacia la cara frontal (imagen)
+      if (isFirefox) {
+          textModal.style.display = 'none';
+          imgModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(0deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
+  }
+
+  // Cambia el estado de visibilidad
+  isFrontVisible = !isFrontVisible;
+}
 flipButton.addEventListener("click", function () {
   voltear();
 });

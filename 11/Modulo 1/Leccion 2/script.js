@@ -7,7 +7,7 @@ var miAudio = document.getElementById("miAudio"); // Reemplaza "miAudio" con el 
 var countblock = 1;
 //Actualizar data para nueva presentacion, solo cambiar las tarjetas, y la forma de crear su informacion
 var data = {
-  title: "Lección 03: Medidas de prevención contra caídas",
+  title: "Medidas de prevención contra caídas",
   title2: "Medidas de prevención contra caídas",
   status: false,
   src: "audio/audio_begin.mp3",

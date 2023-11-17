@@ -7,7 +7,7 @@ var susbcount = 1;
 var miAudio = document.getElementById("miAudio");
 
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 6: Tipos de Contacto Eléctrico​",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -18,7 +18,7 @@ var data = {
       src: "audio/audio_01.mp3",
       image: "imagen/recurso5.jfif",
       narracion:
-        "Contacto directo: Ocurre cuando una persona toca o entra en contacto con un conductor, una instalación o un elemento eléctrico que está bajo tensión directa. Este tipo de contacto presenta un riesgo significativo.​",
+        "Ocurre cuando una persona toca o entra en contacto con un conductor, una instalación o un elemento eléctrico que está bajo tensión directa. Este tipo de contacto presenta un riesgo significativo.​",
       carouselimg: true,
     },   
     {
@@ -26,7 +26,7 @@ var data = {
       src: "audio/audio_02.mp3",
       image: "imagen/recurso5.jfif",
       narracion:
-        "Contacto indirecto: Se produce cuando una persona toca partes metálicas, conductores, elementos o máquinas que no deberían estar bajo tensión directa, pero, debido a circunstancias accidentales, quedan energizadas. Este tipo de contacto puede ser igualmente peligroso y es importante prestar atención a las condiciones de seguridad para evitarlo. ​",
+        "Se produce cuando una persona toca partes metálicas, conductores, elementos o máquinas que no deberían estar bajo tensión directa, pero, debido a circunstancias accidentales, quedan energizadas. Este tipo de contacto puede ser igualmente peligroso y es importante prestar atención a las condiciones de seguridad para evitarlo. ​",
       carouselimg: false,
     },
   ],
@@ -91,16 +91,36 @@ $(window).on("load", function () {
   $("#cargaModal").modal("hide");
 });
 
-const voltear = () => {
+function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
+
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
   if (isFrontVisible) {
-    flipContent.style.transform = "rotateY(180deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
+      // Gira hacia la cara trasera (texto)
+      if (isFirefox) {
+          imgModal.style.display = 'none';
+          textModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(180deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
   } else {
-    flipContent.style.transform = "rotateY(0deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
+      // Gira hacia la cara frontal (imagen)
+      if (isFirefox) {
+          textModal.style.display = 'none';
+          imgModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(0deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
   }
+
+  // Cambia el estado de visibilidad
   isFrontVisible = !isFrontVisible;
-};
+}
 
 flipButton.addEventListener("click", function () {
   voltear();

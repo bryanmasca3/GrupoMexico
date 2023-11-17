@@ -6,7 +6,7 @@ var miAudio = document.getElementById("miAudio"); // Reemplaza "miAudio" con el 
 
 //Actualizar data para nueva presentacion, solo cambiar las tarjetas, y la forma de crear su informacion
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 2:	Referencia Normativa",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -14,52 +14,58 @@ var data = {
   srcimagecircle: "imagen/recurso5.jfif",
   tarjetas: [
     {
-      text: "NOM-001-SEDE-2018",
+      text: "NOM-001-SEDE-2018 Instalaciones Eléctricas (utilización)",
+      textInner:"Norma Oficial Mexicana 001-SEDE-2018 Instalaciones Eléctricas (utilización)",
       src: "audio/audio_01.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NOM-001-SEDE-2018 Instalaciones Eléctricas (utilización): Esta norma establece las especificaciones técnicas para garantizar el uso seguro y adecuado de la energía eléctrica en las instalaciones. Se centra en prevenir problemas como choques eléctricos, efectos térmicos, sobrecorrientes y sobretensiones.​",
+        "Esta norma establece las especificaciones técnicas para garantizar el uso seguro y adecuado de la energía eléctrica en las instalaciones. Se centra en prevenir problemas como choques eléctricos, efectos térmicos, sobrecorrientes y sobretensiones.​",
     },
     {
-      text: "NOM-029-STPS-2011​​",
+      text: "NOM-029-STPS-2011​​ Mantenimiento de las instalaciones\n eléctricas en los  centros de trabajo",
+      textInner:"Norma Oficial Mexicana 029-STPS-2011 Mantenimiento de las instalaciones eléctricas en los centros de trabajo",
       src: "audio/audio_02.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NOM-029-STPS-2011 Mantenimiento de las instalaciones eléctricas en los centros de trabajo: Esta normativa establece condiciones de seguridad para el mantenimiento de instalaciones eléctricas en centros de trabajo, con el objetivo de prevenir accidentes tanto para el personal de mantenimiento como para otras personas que puedan estar cerca.​",
+        "Esta normativa establece condiciones de seguridad para el mantenimiento de instalaciones eléctricas en centros de trabajo, con el objetivo de prevenir accidentes tanto para el personal de mantenimiento como para otras personas que puedan estar cerca.​",
     },
     {
-      text: "NOM-022-STPS-2008​​",
+      text: "NOM-022-STPS-2008 Electricidad estática en los \ncentros de trabajo​​",
+      textInner:"Norma Oficial Mexicana 022-STPS-2008 Electricidad estática en los centros de trabajo",
       src: "audio/audio_03.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NOM-022-STPS-2008 Electricidad estática en los centros de trabajo: Esta norma se enfoca en prevenir riesgos relacionados con la electricidad estática en el entorno laboral.​",
+        "Esta norma se enfoca en prevenir riesgos relacionados con la electricidad estática en el entorno laboral.​",
     },
     {
-      text: "NFPA 70 (NEC)​​",
+      text: "NFPA 70 (NEC) Código Eléctrico Nacional​​",
+      textInner:"NFPA 70 (NEC): Código Eléctrico Nacional",
       src: "audio/audio_04.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NFPA 70 (NEC): Código Eléctrico Nacional: Establece directrices sobre materiales eléctricos y cómo usarlos correctamente. También aborda la seguridad en las instalaciones eléctricas y el alumbrado.​",
+        "Establece directrices sobre materiales eléctricos y cómo usarlos correctamente. También aborda la seguridad en las instalaciones eléctricas y el alumbrado.​",
     },
     {
-      text: "NFPA 70B​",
+      text: "NFPA 70B​ Prácticas Seguras para Mantenimiento Eléctrico",
+      textInner:"NFPA 70B Prácticas Seguras para Mantenimiento Eléctrico",
       src: "audio/audio_05.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NFPA 70B Prácticas Seguras para Mantenimiento Eléctrico: Esta norma se centra en el mantenimiento preventivo para reducir fallas e incidentes en las instalaciones eléctricas. Define la periodicidad y los puntos clave del mantenimiento.​",
+        "Esta norma se centra en el mantenimiento preventivo para reducir fallas e incidentes en las instalaciones eléctricas. Define la periodicidad y los puntos clave del mantenimiento.​",
     },
     {
-      text: "NFPA 70E​",
+      text: "NFPA 70E Seguridad Eléctrica en Lugares de Trabajo​",
+      textInner:"NFPA 70E: Seguridad Eléctrica en Lugares de Trabajo",
       src: "audio/audio_06.mp3",
       image: "imagen/recurso5.jfif",
        carouselimg: false,
       narracion:
-        "NFPA 70E: Seguridad Eléctrica en Lugares de Trabajo: Ofrece prácticas seguras para trabajar en instalaciones eléctricas y crea un entorno de trabajo seguro en relación con los peligros eléctricos.​",
+        "Ofrece prácticas seguras para trabajar en instalaciones eléctricas y crea un entorno de trabajo seguro en relación con los peligros eléctricos.​",
     },
   ],
 };
@@ -193,7 +199,7 @@ function crearDivCentradosStep4(id, elementos) {
   elementos.forEach((elemento, index) => {
     const item = document.createElement("div");
     item.className = `item col-md-${numColumnas} d-flex justify-content-center align-items-center`;
-    item.textContent = elemento.text;
+    item.textContent = elemento.text.replace(/\n/g, "<br>");;
     item.id = `elemento-${index}`;
     if (index == 3) {
       generarMiniaturas(
@@ -339,7 +345,7 @@ function crearContenidoMedioCirucular(id, elementos) {
 
     item.className = "item child-circle-item d-flex align-items-center"; //need CHECK
     const txtcontent = document.createElement("div");
-    item.innerHTML = elemento.text;
+    item.innerHTML = elemento.text.replace(/\n/g, "<br>");
     item.appendChild(txtcontent);
     const anguloInicial = -50;
     const angulo = anguloInicial + (120 / elementos.length) * index; // Ángulo de rotación
@@ -359,7 +365,7 @@ function crearContenidoMedioCirucular(id, elementos) {
 
         $("#modal-primary").modal("show");
         $("#img-modal").attr("src", elemento.image);
-       // $("#title-secondary-modal").text(elemento.text);
+        $("#title-secondary-modal").text(elemento.textInner);
 
         reproducirAudioItem(elemento.src);
   
@@ -384,7 +390,7 @@ function crearContenidoMedioCirucular(id, elementos) {
           }
           $("#modal-primary").modal("show");
           $("#img-modal").attr("src", elemento.image);
-          //$("#title-secondary-modal").text(elemento.text);
+          $("#title-secondary-modal").text(elemento.textInner);
 
           reproducirAudioItem(elemento.src);
         
@@ -449,7 +455,7 @@ function crearContendorCircular(id, elementos) {
     item.className =
       "item child-circle-item d-flex justify-content-center align-items-center"; //need CHECK
     const txtcontent = document.createElement("div");
-    item.innerHTML = elemento.text;
+    item.innerHTML = elemento.text.replace(/\n/g, "<br>");;
     item.appendChild(txtcontent);
     const anguloInicial = -90;
     const angulo = anguloInicial + (360 / elementos.length) * index; // Ángulo de rotación
@@ -649,14 +655,30 @@ var flipContent = document.querySelector(".flip-content");
 var isFrontVisible = true; // Para rastrear si la cara frontal está visible inicialmente
 
 function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
+
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
   if (isFrontVisible) {
-    // Gira hacia la cara trasera (texto)
-    flipContent.style.transform = "rotateY(180deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
+      // Gira hacia la cara trasera (texto)
+      if (isFirefox) {
+          imgModal.style.display = 'none';
+          textModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(180deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
   } else {
-    // Gira hacia la cara frontal (imagen)
-    flipContent.style.transform = "rotateY(0deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
+      // Gira hacia la cara frontal (imagen)
+      if (isFirefox) {
+          textModal.style.display = 'none';
+          imgModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(0deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
   }
 
   // Cambia el estado de visibilidad

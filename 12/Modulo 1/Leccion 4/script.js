@@ -3,11 +3,11 @@ var marcados = 0;
 var total = 5;
 var fin = false;
 var validar_modal = false;
-var susbcount = 1;
+var susbcount = 0;
 var miAudio = document.getElementById("miAudio");
-var countblock = 1;
+var countblock = 3;
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 4: ¿Qué es un Riesgo Eléctrico?​",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -46,8 +46,10 @@ var data = {
   ],
 };
 const checkFinish = () => {
-  if (marcados == data.tarjetas.length && !fin) {
-    fin = true;    
+  console.log(susbcount);
+  console.log(data.tarjetas.length);
+  if (susbcount == data.tarjetas[0].carousel.length && !fin) {
+    fin = true;
     return true;
   }
   return false;
@@ -72,8 +74,7 @@ var flipContent = document.querySelector(".flip-content");
 
 var isFrontVisible = true;
 
-$(".btn-close-custom").on("click", function () {
-  susbcount = 1;
+$(".btn-close-custom").on("click", function () {  
   $("#img-modal").attr("src", "");
   if (miAudio) {
     miAudio.pause(); // Detén la reproducción del audio
@@ -105,16 +106,36 @@ $(window).on("load", function () {
   $("#cargaModal").modal("hide");
 });
 
-const voltear = () => {
+function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
+
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
   if (isFrontVisible) {
+    // Gira hacia la cara trasera (texto)
+    if (isFirefox) {
+      imgModal.style.display = "none";
+      textModal.style.display = "block";
+    }
+
     flipContent.style.transform = "rotateY(180deg)";
     flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
   } else {
+    // Gira hacia la cara frontal (imagen)
+    if (isFirefox) {
+      textModal.style.display = "none";
+      imgModal.style.display = "block";
+    }
+
     flipContent.style.transform = "rotateY(0deg)";
     flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
   }
+
+  // Cambia el estado de visibilidad
   isFrontVisible = !isFrontVisible;
-};
+}
 
 flipButton.addEventListener("click", function () {
   voltear();
@@ -126,24 +147,33 @@ miAudio.addEventListener("play", function () {
     document
       .querySelectorAll(".img-adjust")
       .forEach((elemento) => (elemento.style.pointerEvents = "none"));
-      document
+    document
       .querySelectorAll(".miniatura")
       .forEach((elemento) => (elemento.style.pointerEvents = "none"));
   }
-  
 });
 
 miAudio.addEventListener("ended", function () {
-  if (!validar_modal&& susbcount == countblock) {
+  console.log(susbcount)
+  console.log(countblock)
+  if (!validar_modal && susbcount == countblock) {
     $(".btn-close-custom").prop("disabled", false);
   }
   document
-    .querySelectorAll(".item")
+    .querySelectorAll(".img-adjust")
     .forEach((elemento) => (elemento.style.pointerEvents = "auto"));
-    document
+  document
     .querySelectorAll(".miniatura")
     .forEach((elemento) => (elemento.style.pointerEvents = "auto"));
- 
+ /*  if (checkFinish()) {
+    reproducirAudioItem(data.srcfinal);
+    console.log("TERMINASTE");
+    if (!debuger) {
+      console.log("Aqui logica para completar nivel");
+      window.parent.validarPuntaje(20, "opcion");
+      debuger = true;
+    }
+  } */
 });
 
 $(document).ready(function () {

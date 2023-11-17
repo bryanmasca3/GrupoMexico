@@ -70,9 +70,9 @@ const buildTemplate1 = (id, elementos) => {
           $("#title-secondary-modal").text(elemento.text);
           // $("#title-modal").text("Medidas de prevención contra caídas");
           reproducirAudioItem(elemento.src);
-          countblock = elemento.carousel.length
+          /* countblock = elemento.carousel.length
             ? elemento.carousel.length + 1
-            : 1;
+            : 1; */
         } else {
           aplicarAnimacion(`#elemento-${marcados}`, "animacion-crecer");
         }

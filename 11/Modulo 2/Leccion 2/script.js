@@ -10,7 +10,7 @@ var miAudio = document.getElementById("miAudio"); // Reemplaza "miAudio" con el 
 
 //Actualizar data para nueva presentacion, solo cambiar las tarjetas, y la forma de crear su informacion
 var data = {
-  title: "Lección 04: Actos y condiciones inseguras​",
+  title: "Actos y condiciones inseguras​",
   title2: "Medidas de prevención contra caídas",
   status: false,
   src: "audio/audio_begin.mp3",

@@ -7,7 +7,7 @@ var susbcount = 1;
 var miAudio = document.getElementById("miAudio");
 var countblock = 1;
 var data = {
-  title: "Lección 02: Estilos de Liderazgo",
+  title: "Lección 7: Causas de los Accidentes Eléctricos​",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
@@ -16,26 +16,29 @@ var data = {
   tarjetas: [
     {
       text: "Factor Equipo​​​",
+      textInner: "Equipos mal instalados y mal servicio de mantenimiento",
       src: "audio/audio_01.mp3",
       image: "imagen/recurso5.jfif",
       narracion:
-        "Equipos mal instalados y mal servicio de mantenimiento: Uno de las principales causas de accidentes eléctricos es la instalación incorrecta de equipos y la falta de mantenimiento adecuado.​​Esto incluye cables mal conectados, ​​aislamiento deteriorado, (cable de alta tension en mal estado)​​ y equipos eléctricos en mal estado.(motor electrico en mal estado) ​​Es fundamental tener un programa de mantenimieneto para garantizar equipos e instalaciones en buen estado ​​",
+        "Uno de las principales causas de accidentes eléctricos es la instalación incorrecta de equipos y la falta de mantenimiento adecuado.​​Esto incluye cables mal conectados, ​​aislamiento deteriorado, (cable de alta tension en mal estado)​​ y equipos eléctricos en mal estado.(motor electrico en mal estado) ​​Es fundamental tener un programa de mantenimieneto para garantizar equipos e instalaciones en buen estado ​​",
       carouselimg: true,
     },
     {
       text: "Factor Ambiente\n de Trabajo​​​",
+      textInner: "Ambientes de Trabajo",
       src: "audio/audio_02.mp3",
       image: "imagen/recurso5.jfif",
       narracion:
-        "Ambientes de Trabajo: Los lugares donde se trabaja con energia electricidad deben ser seguros y cumplir con la normativa correspondiente. Los ambientes de trabajo propensos a causar accidentes contienen: la falta de señalizacion y delimitacion, ​​cables sueltos o expuestos,​​y la presencia de materiales inflamables cerca de fuentes de electricidad Por ello, es fundamental hacer inspecciones periodicas para garantizar ambientes de trabajo seguro. ​​",
+        "Los lugares donde se trabaja con energia electricidad deben ser seguros y cumplir con la normativa correspondiente. Los ambientes de trabajo propensos a causar accidentes contienen: la falta de señalizacion y delimitacion, ​​cables sueltos o expuestos,​​y la presencia de materiales inflamables cerca de fuentes de electricidad Por ello, es fundamental hacer inspecciones periodicas para garantizar ambientes de trabajo seguro. ​​",
       carouselimg: true,
     },
     {
       text: "Factor Humano​​",
+      textInner: "Trabajadores",
       src: "audio/audio_03.mp3",
       image: "imagen/recurso5.jfif",
       narracion:
-        "Trabajadores: La falta de capacitación y/o trabajadores mal calificados son factores críticos en la ocurrecia de accidentes eléctricos. ​​Además, no contar con equipos en buen estado para realizar nuestras actividades de manera segura​​. No Conocer y/o aplicar los procedimientos seguros de trabajo de manera correcta,Y realizar las actividades sin contar con el permiso de trabajo cuando se realicen trabajos con energia electrica.​​ Por ello es fundamental la capacitacion, evaluacion y monitoreo de las actividades con energia electrica. ​ ​",
+        "La falta de capacitación y/o trabajadores mal calificados son factores críticos en la ocurrecia de accidentes eléctricos. ​​Además, no contar con equipos en buen estado para realizar nuestras actividades de manera segura​​. No Conocer y/o aplicar los procedimientos seguros de trabajo de manera correcta,Y realizar las actividades sin contar con el permiso de trabajo cuando se realicen trabajos con energia electrica.​​ Por ello es fundamental la capacitacion, evaluacion y monitoreo de las actividades con energia electrica. ​ ​",
       carouselimg: true,
     },
   ],
@@ -100,17 +103,36 @@ $(window).on("load", function () {
   $("#cargaModal").modal("hide");
 });
 
-const voltear = () => {
-  if (isFrontVisible) {
-    flipContent.style.transform = "rotateY(180deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
-  } else {
-    flipContent.style.transform = "rotateY(0deg)";
-    flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
-  }
-  isFrontVisible = !isFrontVisible;
-};
+function voltear() {
+  var imgModal = document.getElementById("img-modal");
+  var textModal = document.getElementById("text-modal");
 
+  // Detectar si el navegador es Firefox
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
+
+  if (isFrontVisible) {
+      // Gira hacia la cara trasera (texto)
+      if (isFirefox) {
+          imgModal.style.display = 'none';
+          textModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(180deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-slash"></i>';
+  } else {
+      // Gira hacia la cara frontal (imagen)
+      if (isFirefox) {
+          textModal.style.display = 'none';
+          imgModal.style.display = 'block';
+      }
+
+      flipContent.style.transform = "rotateY(0deg)";
+      flipButton.innerHTML = '<i class="fa-solid fa-text-height"></i>';
+  }
+
+  // Cambia el estado de visibilidad
+  isFrontVisible = !isFrontVisible;
+}
 flipButton.addEventListener("click", function () {
   voltear();
 });

@@ -184,7 +184,7 @@
 
 /* Estilo para dispositivos móviles */
 .mobile {
-  height: 350px;
+  height: 330px;
   overflow: hidden;
 }
 
@@ -221,9 +221,10 @@
   cursor: pointer;
   font-weight: 500;
   /*  width: 120px; */
-  width: 650px;
+  width: 640px;
   height: 45px;
   padding-left: 20px;
+  text-align: left !important;
   border-radius: var(--angulo) !important;
 }
 
@@ -558,10 +559,10 @@
     height: 550px;
   }
   .item{
-    height:55px;
+    height:65px;
     font-weight: 500;
     font-size: 1.0rem;
-    width: 950px;
+    width: 940px;
   }
   .circle{
     border: 20px solid var(--clickedcolor);

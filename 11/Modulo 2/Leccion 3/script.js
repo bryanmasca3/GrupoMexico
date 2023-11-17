@@ -6,7 +6,7 @@ var miAudio = document.getElementById("miAudio"); // Reemplaza "miAudio" con el 
 
 //Actualizar data para nueva presentacion, solo cambiar las tarjetas, y la forma de crear su informacion
 var data = {
-  title: "Lección 05: Beneficios del Programa SBC ​",
+  title: "Beneficios del Programa SBC ​",
   title2: "Definiciones Generales",
   status: false,
   src: "audio/audio_begin.mp3",
