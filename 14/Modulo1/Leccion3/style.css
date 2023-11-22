@@ -81,9 +81,6 @@
 .flip-container {
   perspective: 1000px;
 }
-.title-theme{
-  text-align: center;
-}
 
 /* Contenido que puede ser volteado */
 .flip-content {
@@ -297,15 +294,15 @@
   /* Espaciado interior */
 }
 /* Animación de desvanecimiento */
-
+.title-theme{
+  text-align: center;
+}
 .content-main {
-  padding: 50px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
 }
 #content {
- 
-
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -321,26 +318,15 @@
 
   flex: 1;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;  
-  color: #fff;
-  text-align: center;
+  justify-content: center;
 }
 .item {
-  height: 60px;
-  background-color: var(--colorsecondary);
-  width: 100%;
-  font-weight: 500;
-  font-size: 1.2rem;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  border-radius: 15px;
-  position: relative;
-  justify-content: center;
+  
+  flex: 0 0 calc(100%);
 }
 
 .imgcontent{
@@ -360,10 +346,25 @@
   min-height: 150px;
   max-width: 600px;
   max-height: 600px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 20px 20px 0px 0px;
+  border: 10px solid #fff;
 }
-
-.item.clicked {
- background-color: var(--clickedcolor);
+.item-img{
+  cursor: pointer;
+}
+.item-img.clicked {
+  border: 10px solid var(--clickedcolor);
+  transition: all 0.5s ease;
+}
+.item-triangle{
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.item-triangle.clicked{
+  background-color: var(--clickedcolor);
   transition: all 0.5s ease;
 }
 @keyframes desvanecer {
@@ -404,8 +405,7 @@
     /* Tamaño original */
   }
 
-  50% {
-    transform: scale(1.2);
+  50% {   
     background-color: red;
     /* Tamaño aumentado a la mitad de la animación */
   }
@@ -430,10 +430,14 @@
     opacity: 1;
   }
 }
+.triangle-inner {
+  font-weight: 500; 
+  font-size: 1.8rem;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+  
   .main {
     flex-direction: row;
    justify-content: center;
@@ -450,11 +454,12 @@
     max-width: 600px;
     max-height: 600px;
   }
+  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-height: 599px) {
-
+ 
   .mobile {
     height: 280px;
   }
@@ -477,33 +482,50 @@
     max-width: 300px;
     max-height: 300px;
   }
+  .triangle-inner {
+    font-size: 1.2rem;
+  }
+  .container-circle {
+    width: 350px; /* Doble del radio del círculo original */
+    height: 350px; /* Doble del radio del círculo original */
+  }
 }
 @media only screen and (min-width: 768px) and (min-height: 599px) {
- 
+  
   .mobile {
     height: 550px;
-  }  
+  }
+  .main {
+   
+    flex-direction: column;
+  }
   .item {
     flex: 1;
   }
   #content {
     flex-direction: row;
   }
+  .triangle-inner {
+    font-size: 1.3rem;
+  }
+  .container-circle {
+    width: 450px; /* Doble del radio del círculo original */
+    height: 450px; /* Doble del radio del círculo original */
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-height: 599px) {
- 
+  
   .mobile {
     height: 270px;
   }
   
-  #content-main {
-    padding: 100px;
+  #content {
+    padding: 20px;
   }  
   .item {
     flex: 0 0 calc(33.33% - 10px);
-    height: 80px;
   }
   .img-adjust {
     width: 100%;
@@ -513,21 +535,30 @@
     min-height: 250px;
     max-width: 250px;
     max-height: 250px;
+    
+  }
+  .triangle-inner {
+    font-size: 1.3rem;
+  }
+  .container-circle {
+    width: 400px; /* Doble del radio del círculo original */
+    height: 400px; /* Doble del radio del círculo original */
   }
 }
 
 @media only screen and (min-width: 992px) and (min-height: 599px) {
-
+  
   .mobile {
     height: 550px;
   }
-  #content-main {
-    padding: 100px;
+  #content {
+    padding: 40px;
   }  
- 
+  .content-main{
+    padding: 20px;
+  }
   .item {
-    flex: 0 0 calc(25% - 10px);
-    height: 160px;
+    flex: 0 0 calc(33.33% - 10px);
   }
   .img-adjust {
     width: 100%;
@@ -537,5 +568,13 @@
     min-height: 500px;
     max-width: 600px;
     max-height: 600px;
+  }
+  .triangle-inner {
+    font-weight: 500;
+    font-size: 4rem;
+  }
+  .container-circle {
+    width: 650px; /* Doble del radio del círculo original */
+    height: 650px; /* Doble del radio del círculo original */
   }
 }

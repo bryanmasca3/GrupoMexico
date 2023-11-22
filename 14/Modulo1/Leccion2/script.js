@@ -3,9 +3,11 @@ var marcados = 0;
 var total = 5;
 var fin = false;
 var validar_modal = false;
-var susbcount = 1;
+var susbcount = 0;
 var miAudio = document.getElementById("miAudio");
-var countblock = 1;
+var countblock = 0;
+let index = 0;
+let indexElement = 0;
 var data = {
   title: "Lección 7: Recomendaciones de seguridad en trabajos eléctricos​",
   title2: "Definiciones Generales",
@@ -19,14 +21,46 @@ var data = {
       src: "audio/audio_01.mp3",
       image: "imagen/recurso5.jfif",
       carouselimg: false,
+      animation: true,
       narracion:
         "Capacitación: Nunca realices trabajos eléctricos si no has sido debidamente capacitado y autorizado para hacerlo. La capacitación es esencial para comprender los riesgos y las medidas de seguridad necesarias. ​ ",
+      carousel: [
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+      ],
     },
     {
       text: "Corte la corriente eléctrica",
       src: "audio/audio_02.mp3",
       image: "imagen/recurso5.jfif",
       carouselimg: false,
+      animation: false,
       narracion:
         "Corte la corriente eléctrica: Antes de realizar cualquier trabajo en equipos o instalaciones eléctricas, asegúrate de cortar la corriente eléctrica adecuadamente y de forma segura. Utiliza dispositivos de bloqueo si es necesario para evitar que otros activen la energía mientras trabajas. ​​",
     },
@@ -35,6 +69,7 @@ var data = {
       src: "audio/audio_03.mp3",
       image: "imagen/recurso5.jfif",
       carouselimg: false,
+      animation: false,
       narracion:
         "No eche agua en un fuego eléctrico: Nunca utilices agua para apagar un fuego eléctrico. En su lugar, utiliza extintores de incendios apropiados para fuegos eléctricos, como extintores de dióxido de carbono (CO2) o polvo químico seco. ​ ​",
     },
@@ -42,57 +77,26 @@ var data = {
       text: "Zapatos secos",
       src: "audio/audio_04.mp3",
       image: "imagen/recurso5.jfif",
-      carouselimg: false,
+      carouselimg: true,
+      animation: false,
       narracion:
         "Zapatos secos: Cuando utilices herramientas eléctricas o trabajes en entornos eléctricos, asegúrate de que tus zapatos estén secos. El calzado mojado aumenta el riesgo de descarga eléctrica. ​​​",
-    },
-    {
-      text: "Cables en buen estado​​",
-      src: "audio/audio_05.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Cables en buen estado: No utilices cables eléctricos que estén dañados o defectuosos. Los cables en mal estado pueden causar cortocircuitos y descargas eléctricas. ​​ ​",
-    },
-    {
-      text: "Evita extensiones/prolongadores en exceso",
-      src: "audio/audio_06.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Evita extensiones/prolongadores en exceso: No utilices demasiadas extensiones o prolongadores eléctricos conectados en serie, ya que esto puede sobrecargar el circuito y aumentar el riesgo de incendio o descarga eléctrica. ​",
-    },
-    {
-      text: "Informe de equipos defectuosos",
-      src: "audio/audio_07.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Informe de equipos defectuosos: Si detectas equipos eléctricos defectuosos o con problemas de funcionamiento, informa de inmediato a tu supervisor o al departamento de mantenimiento para que se realicen las reparaciones necesarias. ​​",
-    },
-    {
-      text: "Mantenimiento preventivo",
-      src: "audio/audio_08.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Mantenimiento preventivo: Realiza un mantenimiento preventivo regular en equipos e instalaciones eléctricas. Esto incluye inspecciones periódicas, pruebas y reparaciones para asegurarse de que todo esté en buenas condiciones de funcionamiento. ​ ​",
-    },
-    {
-      text: "Uso de EPP",
-      src: "audio/audio_09.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Uso de EPP: Utiliza equipos de protección personal (EPP) adecuados, como cascos dieléctricos, guantes dieléctricos, ropa de trabajo resistente al fuego y otros elementos de protección, según sea necesario. ​ ​​",
-    },
-    {
-      text: "Procedimientos seguros de trabajo​​",
-      src: "audio/audio_10.mp3",
-      image: "imagen/recurso5.jfif",
-      carouselimg: false,
-      narracion:
-        "Procedimientos seguros de trabajo: Sigue siempre los procedimientos de trabajo seguro establecidos por tu organización. Estos procedimientos deben incluir medidas específicas para prevenir accidentes eléctricos. ​​",
+      carousel: [
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+        {
+          text: "Programa de Prevención contra caídas",
+          src: "audio/audio_01.mp3",
+          image: "imagen/recurso5.jfif",
+          narracion:
+            "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+        },
+      ],
     },
   ],
 };
@@ -124,7 +128,9 @@ var flipContent = document.querySelector(".flip-content");
 var isFrontVisible = true;
 
 $(".btn-close-custom").on("click", function () {
-  susbcount = 1;
+  index=0
+  susbcount = 0;
+  $(".content-inner").remove();
   $("#img-modal").attr("src", "");
   if (miAudio) {
     miAudio.pause(); // Detén la reproducción del audio
@@ -203,10 +209,30 @@ miAudio.addEventListener("play", function () {
   }
 });
 
-miAudio.addEventListener("ended", function () {
-  if (!validar_modal && susbcount == countblock) {
-    $(".btn-close-custom").prop("disabled", false);
+function appearContent() {
+  if(!data.tarjetas[indexElement].carouselimg){
+    if (index == 0) {
+      $(".mobile").append("<div class='content-inner'></div>");
+    }
+    reproducirAudioItem(data.tarjetas[indexElement].carousel[index].src);
+  
+    $(".content-inner").append(
+      "<p>" + data.tarjetas[indexElement].carousel[index++].text + "</p>"
+    );
   }
+ 
+}
+
+miAudio.addEventListener("ended", function () {
+  if (
+    !validar_modal && data.tarjetas[indexElement].animation &&
+    (data.tarjetas[indexElement].carousel.length == index||susbcount == countblock)
+  ) {
+    $(".btn-close-custom").prop("disabled", false);
+  } else {
+    appearContent();
+  }
+
   document
     .querySelectorAll(".item")
     .forEach((elemento) => (elemento.style.pointerEvents = "auto"));

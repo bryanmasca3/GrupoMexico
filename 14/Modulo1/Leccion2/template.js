@@ -20,10 +20,10 @@ const buildTemplate1 = (id, elementos) => {
       miElemento.classList.add("d-flex");
       
       $("#text-modal").text(elemento.narracion);
-
+      
       if (debuger) {
         item.classList.add("clicked");
-
+      
         $("#modal-primary").modal("show");
         $("#img-modal").attr("src", elemento.image);
         $("#title-secondary-modal").text(elemento.text);
@@ -35,13 +35,13 @@ const buildTemplate1 = (id, elementos) => {
             "carouselExampleCaptions",
             "miniatura-content"
           );
-        } else if (elemento.carousel && !elemento.carouselimg) {
+        } /* else if (elemento.carousel && !elemento.carouselimg) {
           generarComponent(
             elemento.carousel,
             "carouselExampleCaptions",
             "miniatura-content"
           );
-        }
+        } */
       } else {
         if (marcados >= index) {
           if (elemento.carousel && elemento.carouselimg) {
@@ -50,25 +50,26 @@ const buildTemplate1 = (id, elementos) => {
               "carouselExampleCaptions",
               "miniatura-content"
             );
-          } else if (elemento.carousel && !elemento.carouselimg) {
+          } /* else if (elemento.carousel && !elemento.carouselimg) {
             generarComponent(
               elemento.carousel,
               "carouselExampleCaptions",
               "miniatura-content"
             );
-          }
+          } */
 
           if (!item.classList.contains("clicked")) {
             item.classList.add("clicked");
             marcados += 1;
           }
+          indexElement=index;
           $("#modal-primary").modal("show");
           $("#img-modal").attr("src", elemento.image);
           $("#title-secondary-modal").text(elemento.text);
           // $("#title-modal").text("Medidas de prevención contra caídas");
           reproducirAudioItem(elemento.src);
           countblock = elemento.carousel?.length
-            ? elemento.carousel.length + 1
+            ? elemento.carousel.length
             : 1;
         } else {
           aplicarAnimacion(`#elemento-${marcados}`, "animacion-crecer");

@@ -1,4 +1,4 @@
-var debuger = true;
+var debuger = false;
 var marcados = 0;
 var fin = false;
 var validar_modal = false;
@@ -40,7 +40,7 @@ var data = {
       narracion:
         "NORMA INTERNACIONAL ISO 45001 - Sistemas de Gestión de Seguridad y Salud en el Trabajo: Establece los requisitos para un sistema de gestión de seguridad y salud en el trabajo (SST). Incluye directrices sobre la notificación, investigación y reporte de incidentes y accidentes, así como la prevención de lesiones y enfermedades laborales.​",
     },
-    {
+   /*  {
       text: "ILO-OSH 2001​​",
       textInner: "ILO-OSH 2001",
       src: "audio/audio_04.mp3",
@@ -66,7 +66,7 @@ var data = {
       carouselimg: false,
       narracion:
         "Ahora veremos la relación que tiene la OSHA en este curso.​ La Administración de Seguridad y Salud Ocupacional de los Estados Unidos (OSHA) establece regulaciones detalladas sobre la notificación y el registro de accidentes y enfermedades en el lugar de trabajo.",
-    },
+    }, */
   ],
 };
 
@@ -346,7 +346,7 @@ function crearContenidoMedioCirucular(id, elementos) {
     const txtcontent = document.createElement("div");
     item.innerHTML = elemento.text.replace(/\n/g, "<br>");
     item.appendChild(txtcontent);
-    const anguloInicial = -50;
+    const anguloInicial = -40;
     const angulo = anguloInicial + (120 / elementos.length) * index; // Ángulo de rotación
 
     item.style.transform = `rotate(${angulo}deg) translate(${
