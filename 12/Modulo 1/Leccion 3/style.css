@@ -328,7 +328,7 @@
 .imgcontent{
   width: 100%;
   height: 100%;
-  
+  border-radius: 25px;
   min-width: 200px;
   min-height: 200px;
   max-width: 250px;
@@ -491,7 +491,7 @@
     height: 550px;
   }
   .content-main {
-    padding: 100px;
+    padding: 90px;
   }  
  
   .item {

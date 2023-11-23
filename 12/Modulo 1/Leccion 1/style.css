@@ -440,7 +440,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-      background-image: url(imagen/recurso5.jfif);
+      background-image: url(imagen/2.png);
       background-size: cover;
       background-position: center;
 }
@@ -455,7 +455,7 @@
     bottom: 0;
     display: flex;
     justify-content: center;
-    background-image: url(imagen/recurso5.jfif);
+    background-image: url(imagen/2.png);
     background-size: cover;
     background-position: center;
     align-items: center;

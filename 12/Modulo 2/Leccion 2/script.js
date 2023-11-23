@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var fin = false;
 var validar_modal = false;
@@ -19,9 +19,32 @@ var data = {
         "",
       src: "audio/audio_01.mp3",
       image: "imagen/recurso5.jfif",
-      carouselimg: false,
+      carouselimg: true,
       narracion:
         "Tableros Eléctricos: ​El tablero general es el punto donde llega la acometida eléctrica, que alimenta de energía eléctrica a la instalación y desde donde se distribuye la electricidad a los diferentes circuitos, como luminarias, tomacorrientes y maquinarias. ​Los tableros eléctricos son fundamentales para controlar y distribuir la energía eléctrica de manera segura y eficiente en una instalación. ​​",
+        carousel: [
+          {
+            text: "Programa de Prevención contra caídas",
+            src: "audio/audio_01_1.mp3",
+            image: "imagen/Recurso 3.png",
+            narracion:
+              "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+          },
+          {
+            text: "Delimitación del área",
+            src: "audio/audio_01_2.mp3",
+            image: "imagen/18.png",
+            narracion:
+              " Por ejemplo, amarrar la carga sin guantes.​ ",
+          },
+          {
+            text: "Delimitación del área",
+            src: "audio/audio_01_3.mp3",
+            image: "imagen/22.png",
+            narracion:
+              "Manipular la carga sin presencia de riggger.​ ",
+          }        
+        ],
     },
     {
       text: "Llaves Termomagnéticas​",
@@ -29,9 +52,25 @@ var data = {
         "",
       src: "audio/audio_02.mp3",
       image: "imagen/recurso5.jfif",
-      carouselimg: false,
+      carouselimg: true,
       narracion:
         "Llaves Termomagnéticas: ​Estos dispositivos actúan cuando la corriente eléctrica supera el valor nominal especificado en sus características técnicas. ​Su objetivo principal es proteger la instalación eléctrica y los equipos ante posibles fallas o sobrecargas eléctricas. ​Se activan cuando circulan corrientes eléctricas elevadas y están diseñados para la protección de equipos y circuitos. ​​​",
+        carousel: [
+          {
+            text: "Programa de Prevención contra caídas",
+            src: "audio/audio_01_1.mp3",
+            image: "imagen/Recurso 3.png",
+            narracion:
+              "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
+          },
+          {
+            text: "Delimitación del área",
+            src: "audio/audio_01_2.mp3",
+            image: "imagen/18.png",
+            narracion:
+              " Por ejemplo, amarrar la carga sin guantes.​ ",
+          },    
+        ],
     },
     {
       text: "Llaves Diferenciales​​",

@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -17,7 +17,7 @@ var data = {
     {
       text: "Fibrilación Ventricular​",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/1.webp",
       carouselimg: false,
       type: false,
       narracion:
@@ -34,7 +34,7 @@ var data = {
       text: "Paro Cardíaco​",
       type: false,
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/art05.xml_image4.jpeg",
       carouselimg: false,
       narracion:
         "Esto sucede cuando una persona se electrocuta y la energía eléctrica pasa a través del corazón. Este efecto es extremadamente grave y potencialmente mortal si no se trata de inmediato. ​ ​",
@@ -50,7 +50,7 @@ var data = {
       text: "Asfixia",
       type: false,
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/imagen-fig01.jpg",
       carouselimg: false,
       narracion:
         "Esto sucede cuando la energia eléctrica atraviesa el tórax, provocando una contracción involuntaria del diafragma, lo que impide la respiración. Esto puede llevar a la asfixia y ser fatal si no se trata de manera rápida y adecuada. ​ ​",

@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var fin = false;
 var validar_modal = false;
@@ -11,13 +11,13 @@ var data = {
   status: false,
   src: "audio/audio_begin.mp3",
   srcfinal: "audio/audio_end.mp3",
-  srcimagecircle: "imagen/recurso5.jfif",
+  srcimagecircle: "imagen/diapo-08.png",
   tarjetas: [
     {
       text: "Ley Federal del Trabajo",
       textInner: "Ley Federal del Trabajo",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-09.png",
       carouselimg: false,
       narracion:
         "Ley Federal del Trabajo​ Establece las obligaciones del patrón en cuanto a la seguridad en el trabajo y la prevención de accidentes. En el artículo 133 se establece la obligación del patrón de notificar a la autoridad laboral sobre los accidentes de trabajo que ocurran en el centro de trabajo.​",
@@ -26,7 +26,7 @@ var data = {
       text: "NOM-019-STPS-2011 ​",
       textInner: "NOM-019-STPS-2011",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-11.png",
       carouselimg: false,
       narracion:
         "NOM-019-STPS-2011: La norma establece los requisitos mínimos para la constitución y funcionamiento de las comisiones de seguridad e higiene en los centros de trabajo, incluyendo la investigación de accidentes.​",
@@ -35,7 +35,7 @@ var data = {
       text: "ISO 45001: 2018​​​",
       textInner: "NORMA INTERNACIONAL ISO 45001 - Sistemas de Gestión de Seguridad y Salud en el Trabajo​",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-13 ISO 45001.gif",
       carouselimg: false,
       narracion:
         "NORMA INTERNACIONAL ISO 45001 - Sistemas de Gestión de Seguridad y Salud en el Trabajo: Establece los requisitos para un sistema de gestión de seguridad y salud en el trabajo (SST). Incluye directrices sobre la notificación, investigación y reporte de incidentes y accidentes, así como la prevención de lesiones y enfermedades laborales.​",

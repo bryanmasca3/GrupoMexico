@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var fin = false;
 var validar_modal = false;
@@ -11,13 +11,13 @@ var data = {
   status: false,
   src: "audio/audio_begin.mp3",
   srcfinal: "audio/audio_end.mp3",
-  srcimagecircle: "imagen/recurso5.jfif",
+  srcimagecircle: "imagen/2.png",
   tarjetas: [
     {
       text: "NOM-001-SEDE-2018 Instalaciones Eléctricas (utilización)",
       textInner:"Norma Oficial Mexicana 001-SEDE-2018 Instalaciones Eléctricas (utilización)",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/img_3117.jpg",
        carouselimg: false,
       narracion:
         "Esta norma establece las especificaciones técnicas para garantizar el uso seguro y adecuado de la energía eléctrica en las instalaciones. Se centra en prevenir problemas como choques eléctricos, efectos térmicos, sobrecorrientes y sobretensiones.​",
@@ -26,7 +26,7 @@ var data = {
       text: "NOM-029-STPS-2011​​ Mantenimiento de las instalaciones\n eléctricas en los  centros de trabajo",
       textInner:"Norma Oficial Mexicana 029-STPS-2011 Mantenimiento de las instalaciones eléctricas en los centros de trabajo",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/IMG_3120.jpg",
        carouselimg: false,
       narracion:
         "Esta normativa establece condiciones de seguridad para el mantenimiento de instalaciones eléctricas en centros de trabajo, con el objetivo de prevenir accidentes tanto para el personal de mantenimiento como para otras personas que puedan estar cerca.​",
@@ -35,7 +35,7 @@ var data = {
       text: "NOM-022-STPS-2008 Electricidad estática en los \ncentros de trabajo​​",
       textInner:"Norma Oficial Mexicana 022-STPS-2008 Electricidad estática en los centros de trabajo",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/3.jpg",
        carouselimg: false,
       narracion:
         "Esta norma se enfoca en prevenir riesgos relacionados con la electricidad estática en el entorno laboral.​",
@@ -44,7 +44,7 @@ var data = {
       text: "NFPA 70 (NEC) Código Eléctrico Nacional​​",
       textInner:"NFPA 70 (NEC): Código Eléctrico Nacional",
       src: "audio/audio_04.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/cddaf28058f6c209c8821803726d9689_XL.jpg",
        carouselimg: false,
       narracion:
         "Establece directrices sobre materiales eléctricos y cómo usarlos correctamente. También aborda la seguridad en las instalaciones eléctricas y el alumbrado.​",
@@ -53,7 +53,7 @@ var data = {
       text: "NFPA 70B​ Prácticas Seguras para Mantenimiento Eléctrico",
       textInner:"NFPA 70B Prácticas Seguras para Mantenimiento Eléctrico",
       src: "audio/audio_05.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/08adfe7bb544d357e3127c038f06a978_L.jpg",
        carouselimg: false,
       narracion:
         "Esta norma se centra en el mantenimiento preventivo para reducir fallas e incidentes en las instalaciones eléctricas. Define la periodicidad y los puntos clave del mantenimiento.​",
@@ -62,7 +62,7 @@ var data = {
       text: "NFPA 70E Seguridad Eléctrica en Lugares de Trabajo​",
       textInner:"NFPA 70E: Seguridad Eléctrica en Lugares de Trabajo",
       src: "audio/audio_06.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/1684103309484.png",
        carouselimg: false,
       narracion:
         "Ofrece prácticas seguras para trabajar en instalaciones eléctricas y crea un entorno de trabajo seguro en relación con los peligros eléctricos.​",

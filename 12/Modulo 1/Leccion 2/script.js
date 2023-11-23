@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -16,7 +16,7 @@ var data = {
     {
       text: "",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/1.png",
       narracion:
         "OSHA es el DEBE:​Provee requerimientos basados en el desempeño para las prácticas de trabajo seguro.​ Con qué debo contar, cuáles son las características, qué prácticas de seguridad debo aplicar.​",
       carouselimg: true,
@@ -31,7 +31,7 @@ var data = {
     {
       text: "​",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/2.jpg",
       narracion:
         "NFPA 70E es el COMO:​ Indica como los empleadores deben garantizar que el empleado aplique los principios establecidos por OSHA.​ Muestra al empleador como alcanzar las prácticas de trabajo seguro.​ Está hecha a la medida para ayudar a los empleadores a cubrir sus responsabilidades (OSHA) y permanecer en tota cumplimiento con las disposiciones.",
       carouselimg: false,

@@ -36,7 +36,7 @@ const buildTemplate1 = (id, elementos) => {
     text.textContent=elemento.text;
     text.className="text-img"
     const img = document.createElement("img");
-    img.src = "imagen/recurso5.jfif";
+    img.src = elemento.image;
     item.className = `item`;
     img.className = "img-adjust";   
     text.id = `img-${index}`;
@@ -52,7 +52,7 @@ const buildTemplate1 = (id, elementos) => {
       if (debuger) {
         text.classList.add("clicked");
         $("#modal-primary").modal("show");
-        $("#img-modal").attr("src", elemento.image);
+        $("#img-modal").attr("src", elemento.imagemodal);
         $("#title-secondary-modal").text(elemento.text);
 
         reproducirAudioItem(elemento.src);
@@ -89,7 +89,7 @@ const buildTemplate1 = (id, elementos) => {
             marcados += 1;
           }
           $("#modal-primary").modal("show");
-          $("#img-modal").attr("src", elemento.image);
+          $("#img-modal").attr("src",elemento.imagemodal);
           $("#title-secondary-modal").text(elemento.text);
           reproducirAudioItem(elemento.src);
           countblock = elemento.carousel?.length

@@ -86,14 +86,14 @@ var data = {
       narracion:
         "Uso de EPP: Utiliza equipos de protección personal (EPP) adecuados, como cascos dieléctricos, guantes dieléctricos, ropa de trabajo resistente al fuego y otros elementos de protección, según sea necesario. ​ ​​",
     },
-    {
+    /* {
       text: "Procedimientos seguros de trabajo​​",
       src: "audio/audio_10.mp3",
       image: "imagen/recurso5.jfif",
       carouselimg: false,
       narracion:
         "Procedimientos seguros de trabajo: Sigue siempre los procedimientos de trabajo seguro establecidos por tu organización. Estos procedimientos deben incluir medidas específicas para prevenir accidentes eléctricos. ​​",
-    },
+    }, */
   ],
 };
 const checkFinish = () => {

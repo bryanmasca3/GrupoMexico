@@ -367,6 +367,12 @@
   background-color: var(--clickedcolor);
   transition: all 0.5s ease;
 }
+.content-img-right{
+  width: 250px;
+}
+.content-img-right img{
+  width: 100%;
+}
 @keyframes desvanecer {
   from {
     opacity: 0;
@@ -493,7 +499,7 @@
   }
   .main {
    
-    flex-direction: column;
+    flex-direction: row;
   }
   .item {
     flex: 1;
@@ -548,7 +554,7 @@
     height: 550px;
   }
   #content {
-    padding: 80px;
+    padding: 0px;
   }  
   .content-main{
     padding: 20px;
@@ -571,5 +577,11 @@
   .container-circle {
     width: 650px; /* Doble del radio del círculo original */
     height: 650px; /* Doble del radio del círculo original */
+  }
+  .content-img-right{
+    width: 550px;
+  }
+  .content-img-right img{
+    width: 100%;
   }
 }

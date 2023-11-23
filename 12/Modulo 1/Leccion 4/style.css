@@ -349,7 +349,7 @@
   max-width: 600px;
   max-height: 600px;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   border: 10px solid #fff;
 }
 .item-img{
@@ -525,7 +525,7 @@
     height: 550px;
   }
   .content-main {
-    padding: 100px;
+    padding:20px;
   }  
  
   .item {

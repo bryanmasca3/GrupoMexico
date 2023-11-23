@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -25,7 +25,7 @@ var data = {
     {
       text: "Frecuencia​​",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 11.png",
       carouselimg: false,
       narracion:
         "La frecuencia de la corriente eléctrica, especialmente en corriente alterna (que se usa en la industria y en nuestros hogares), puede afectar el ritmo cardíaco. Puede llevar a problemas graves en el ritmo cardíaco, como la fibrilación ventricular. ​Ondas de frecuencia y al costado un corazón fibrilando y despues muerto. ​",
@@ -33,7 +33,7 @@ var data = {
     {
       text: "Recorrido​​",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 12.png",
       carouselimg: false,
       narracion:
         "El recorrido se refiere a la trayectoria que sigue la corriente eléctrica a través del cuerpo, los recorridos de la corriente más habituales son mano-mano o mano-pie. Las lesiones eléctricas pueden variar en gravedad según el recorrido que siga la corriente y los órganos internos que atraviese. Por ejemplo, si atraviesa el corazón o los pulmones, los daños pueden ser más graves. La impedancia relativa del cuerpo también puede influir en la gravedad de las lesiones.  ​",
@@ -41,7 +41,7 @@ var data = {
     {
       text: "Resistencia​​",
       src: "audio/audio_04.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 13.png",
       carouselimg: false,
       narracion:
         "La resistencia se relaciona con la oposición que presenta el cuerpo a la corriente eléctrica entre los puntos de contacto. Hay tres tipos de resistencia a considerar: la resistencia propia del cuerpo (que depende de factores como la piel, la superficie de contacto y la humedad), la resistencia de contacto (que se relaciona con la ropa o los guantes) y la resistencia de salida (que se relaciona con el calzado o el tipo de pavimento).  ​​",
@@ -49,7 +49,7 @@ var data = {
     {
       text: "Tiempo de contacto​​",
       src: "audio/audio_05.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/reloj.gif",
       carouselimg: false,
       narracion:
         "El tiempo durante el cual una persona está en contacto con la corriente eléctrica es un factor crítico. Cuanto más largo sea el tiempo de contacto, mayor será el daño potencial. Por lo tanto, es esencial que los sistemas de protección tengan una acción rápida de corte automático. ​ ​",

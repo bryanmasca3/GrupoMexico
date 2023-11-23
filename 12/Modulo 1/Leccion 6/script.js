@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -16,7 +16,8 @@ var data = {
     {
       text: "Contacto directo",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 15.png",
+      imagemodal: "imagen/gif 01.gif",
       narracion:
         "Ocurre cuando una persona toca o entra en contacto con un conductor, una instalación o un elemento eléctrico que está bajo tensión directa. Este tipo de contacto presenta un riesgo significativo.​",
       carouselimg: true,
@@ -24,7 +25,8 @@ var data = {
     {
       text: "Contacto indirecto​",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 14.png",
+      imagemodal: "imagen/gif 02.gif",
       narracion:
         "Se produce cuando una persona toca partes metálicas, conductores, elementos o máquinas que no deberían estar bajo tensión directa, pero, debido a circunstancias accidentales, quedan energizadas. Este tipo de contacto puede ser igualmente peligroso y es importante prestar atención a las condiciones de seguridad para evitarlo. ​",
       carouselimg: false,

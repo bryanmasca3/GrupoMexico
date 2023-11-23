@@ -9,12 +9,12 @@ const buildTemplate1 = (id, elementos) => {
 
   var imgcontent = document.createElement("img");
   imgcontent.className = "imgcontent";
-  imgcontent.src = "https://picsum.photos/300/300";
+  imgcontent.src = "./imagen/Recurso 2.png";
 
   elementos.forEach((elemento, index) => {
     const item = document.createElement("div");
     const img = document.createElement("img");
-    img.src = "https://picsum.photos/200/200";
+    img.src = elemento.image;
 
     item.className = `item`;
     img.className = "img-adjust";
@@ -26,7 +26,7 @@ const buildTemplate1 = (id, elementos) => {
       if (debuger) {
         img.classList.add("clicked");
         reproducirAudioItem(elemento.src);
-        imgcontent.src="https://picsum.photos/200/200"
+        imgcontent.src=elemento.image
       } else {
         if (marcados >= index) {
           if (!img.classList.contains("clicked")) {
@@ -35,7 +35,7 @@ const buildTemplate1 = (id, elementos) => {
           }
 
           reproducirAudioItem(elemento.src);
-          imgcontent.src="https://picsum.photos/200/200"
+          imgcontent.src=elemento.image
           countblock = elemento.carousel?.length
             ? elemento.carousel.length + 1
             : 1;

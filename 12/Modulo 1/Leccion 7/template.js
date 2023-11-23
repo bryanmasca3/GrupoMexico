@@ -9,6 +9,11 @@ const buildTemplate1 = (id, elementos) => {
 
   var content = document.createElement("div");
   content.className = "container-circle";
+  var contentimg = document.createElement("div");
+  contentimg.className="content-img-right";
+  var img = document.createElement("img");
+  img.src="imagen/Recurso 10.png"
+  contentimg.appendChild(img)
 
   elementos.forEach((elemento, index) => {
     const circle = document.createElement("div");
@@ -98,5 +103,6 @@ const buildTemplate1 = (id, elementos) => {
     content.appendChild(circle);
   });
   main.appendChild(content);
+  main.appendChild(contentimg);
   contenedor.appendChild(main);
 };

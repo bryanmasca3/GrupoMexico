@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -73,7 +73,7 @@ var data = {
       text: "H",
       textInner: "Trabajadores",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-47 IMG_8231.jpg",
       narracion:
         "La falta de capacitación y/o trabajadores mal calificados son factores críticos en la ocurrecia de accidentes eléctricos. ​​Además, no contar con equipos en buen estado para realizar nuestras actividades de manera segura​​. No Conocer y/o aplicar los procedimientos seguros de trabajo de manera correcta,Y realizar las actividades sin contar con el permiso de trabajo cuando se realicen trabajos con energia electrica.​​ Por ello es fundamental la capacitacion, evaluacion y monitoreo de las actividades con energia electrica. ​ ​",
       carouselimg: true,
@@ -82,7 +82,7 @@ var data = {
       text: "V",
       textInner: "Trabajadores",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-49.png",
       narracion:
         "La falta de capacitación y/o trabajadores mal calificados son factores críticos en la ocurrecia de accidentes eléctricos. ​​Además, no contar con equipos en buen estado para realizar nuestras actividades de manera segura​​. No Conocer y/o aplicar los procedimientos seguros de trabajo de manera correcta,Y realizar las actividades sin contar con el permiso de trabajo cuando se realicen trabajos con energia electrica.​​ Por ello es fundamental la capacitacion, evaluacion y monitoreo de las actividades con energia electrica. ​ ​",
       carouselimg: true,

@@ -14,12 +14,12 @@ var data = {
   status: false,
   src: "audio/audio_begin.mp3",
   srcfinal: "audio/audio_end.mp3",
-  srcimg: "imagen/recurso5.jfif",
+  srcimg: "imagen/diapo-21.png",
   tarjetas: [
     {
       text: "Capacitación",
       src: "audio/audio_01.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-21.png",
       carouselimg: false,
       animation: true,
       narracion:
@@ -58,7 +58,7 @@ var data = {
     {
       text: "Corte la corriente eléctrica",
       src: "audio/audio_02.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-27 H59I1879.jpg",
       carouselimg: false,
       animation: false,
       narracion:
@@ -67,7 +67,7 @@ var data = {
     {
       text: "No eche agua en un fuego eléctrico",
       src: "audio/audio_03.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-29.png",
       carouselimg: false,
       animation: false,
       narracion:
@@ -76,7 +76,7 @@ var data = {
     {
       text: "Zapatos secos",
       src: "audio/audio_04.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/diapo-31 Antes.png",
       carouselimg: true,
       animation: false,
       narracion:
@@ -85,14 +85,14 @@ var data = {
         {
           text: "Programa de Prevención contra caídas",
           src: "audio/audio_01.mp3",
-          image: "imagen/recurso5.jfif",
+          image: "imagen/diapo-31 Antes.png",
           narracion:
             "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
         },
         {
           text: "Programa de Prevención contra caídas",
           src: "audio/audio_01.mp3",
-          image: "imagen/recurso5.jfif",
+          image: "imagen/diapo-31-Después.png",
           narracion:
             "Los actos inseguros son comportamientos de los trabajadores que aumentan el riesgo de accidentes y pueden tener consecuencias negativas en la seguridad, producción y el entorno. ​",
         },

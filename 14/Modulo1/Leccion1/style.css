@@ -441,9 +441,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-      background-image: url(imagen/recurso5.jfif);
+      background-image: url(imagen/diapo-08.png);
       background-size: cover;
-      background-position: center;
+      background-position: center top;
 }
 .circle2 {    
     border-radius: 50%;
@@ -455,9 +455,9 @@ body{
     bottom: 0;
     display: flex;
     justify-content: center;
-    background-image: url(imagen/recurso5.jfif);
+    background-image: url(imagen/diapo-08.png);
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     align-items: center;
   }
 .background-circle {

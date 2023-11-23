@@ -1,4 +1,4 @@
-var debuger = false;
+var debuger = true;
 var marcados = 0;
 var total = 5;
 var fin = false;
@@ -12,32 +12,32 @@ var data = {
   status: false,
   src: "audio/audio_begin.mp3",
   srcfinal: "audio/audio_end.mp3",
-  srcimg: "imagen/recurso5.jfif",
+  srcimg: "imagen/Recurso 5.png",
   tarjetas: [
     {
       text: "",
       src: "audio/audio_01_1.mp3",
-      image: "imagen/recurso5.jfif",
+      image: "imagen/Recurso 6.png",
       narracion: "El cuerpo humano debe ser conductor de electricidad.",
       carouselimg: true,
       carousel: [
         {
           text: "",
           src: "audio/audio_01_1.mp3",
-          image: "imagen/recurso5.jfif",
+          image: "imagen/Recurso 6.png",
           narracion: "El cuerpo humano debe ser conductor de electricidad. ​",
         },
         {
           text: "",
           src: "audio/audio_01_2.mp3",
-          image: "imagen//recurso5.jfif",
+          image: "imagen//Recurso 7.png",
           narracion:
             "El cuerpo humano debe formar parte de un circuito eléctrico. ",
         },
         {
           text: "",
           src: "audio/audio_01_3.mp3",
-          image: "imagen//recurso5.jfif",
+          image: "imagen//Recurso 8.png",
           narracion:
             "Debe existir una diferencia de potencial (voltaje) entre dos puntos de contacto en el cuerpo, como cuando tocamos un cable con corriente y una superficie conductora al mismo tiempo. ​",
         },

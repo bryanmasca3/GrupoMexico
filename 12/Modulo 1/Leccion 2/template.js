@@ -32,7 +32,7 @@ const buildTemplate1 = (id, elementos) => {
   elementos.forEach((elemento, index) => {
     const item = document.createElement("div");
     const img = document.createElement("img");
-    img.src = "https://picsum.photos/200/200";
+    img.src = elemento.image;
     item.className = `item`;
     img.className = `img-adjust ${index!=1?"img-affect":""}`;
     if (index != 1) {     
