@@ -65,7 +65,7 @@ const generarMiniaturas = (data, carouselId, contenedorId) => {
       if (i === 0) {
         miniatura.classList.add("active");
         $("#text-content").text(data.text);
-        susbcount += 1;
+       // susbcount += 1;
         click = true;
       }
       miniatura.onclick = function () {

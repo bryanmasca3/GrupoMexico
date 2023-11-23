@@ -3,7 +3,7 @@ var marcados = 0;
 var total = 5;
 var fin = false;
 var validar_modal = false;
-var susbcount = 0;
+var susbcount = 1;
 var miAudio = document.getElementById("miAudio");
 var countblock = 0;
 let index = 0;
@@ -129,7 +129,7 @@ var isFrontVisible = true;
 
 $(".btn-close-custom").on("click", function () {
   index=0
-  susbcount = 0;
+  susbcount = 1;
   $(".content-inner").remove();
   $("#img-modal").attr("src", "");
   if (miAudio) {
@@ -225,8 +225,8 @@ function appearContent() {
 
 miAudio.addEventListener("ended", function () {
   if (
-    !validar_modal && data.tarjetas[indexElement].animation &&
-    (data.tarjetas[indexElement].carousel.length == index||susbcount == countblock)
+    !validar_modal &&
+    (data.tarjetas[indexElement].carousel?.length == index||susbcount == countblock)
   ) {
     $(".btn-close-custom").prop("disabled", false);
   } else {
