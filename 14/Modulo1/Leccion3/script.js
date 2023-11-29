@@ -1,4 +1,4 @@
-var debuger = true;
+var debuger = false;
 var marcados = 0;
 var total = 5;
 var fin = false;
